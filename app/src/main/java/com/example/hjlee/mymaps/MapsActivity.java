@@ -16,31 +16,32 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 
 public class MapsActivity extends ActionBarActivity {
- static final LatLng SEOUL = new LatLng( 37.56, 126.97);
-    private GoogleMap map;
- protected void onCreate(Bundle savedInstanceState) {
-     super.onCreate(savedInstanceState);
-     setContentView(R.layout.activity_main);
-   map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map))
- .getMap();
-Marker seoul = map.addMarker(new MarkerOptions().position(SEOUL)
-.title("Seoul"));
-map.moveCamera(CameraUpdateFactory.newLatLngZoom(SEOUL, 15));
-map.animateCamera(CameraUpdateFactory.zoomTo(10), 2000, null);
-}
-/*public boolean onCreateOptionsMenu(Menu menu) {
+    static final LatLng UCI = new LatLng(33.64, -117.84);
+    static final LatLng point1 = new LatLng(33.645443, -117.843140);
+   /* static final LatLng point2 = new LatLng(33.64, -117.84);
+    static final LatLng point3 = new LatLng(33.64, -117.84);
+    static final LatLng point4 = new LatLng(33.64, -117.84);
+    static final LatLng point5 = new LatLng(33.64, -117.84);
+    static final LatLng point6 = new LatLng(33.64, -117.84);
+    static final LatLng point7 = new LatLng(33.64, -117.84);
+    static final LatLng point8 = new LatLng(33.64, -117.84);
+    static final LatLng point9 = new LatLng(33.64, -117.84);
+    static final LatLng         point10 = new LatLng(33.64, -117.84);*/
 
-getMenuInflater().inflate(R.menu.menu_main, menu);
-return true;
-}
- public boolean onOptionsItemSelected(MenuItem item) {
- int id = item.getItemId();
-  if (id == R.id.action_settings) {
+        private GoogleMap map;
 
- return true;
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-}
- return super.onOptionsItemSelected(item);
-  }*/
+        map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map))
+                .getMap();
+
+        Marker a = map.addMarker(new MarkerOptions().position(UCI).title("hi"));
+
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(UCI, 15));
+        map.animateCamera(CameraUpdateFactory.zoomTo(15), 2000, null);
+    }
+
 }
 
