@@ -21,9 +21,13 @@ android {
 
 dependencies {
     repositories {
+        maven {
+            url "https://jitpack.io"
+        }
         mavenCentral()
     }
-    compile 'com.sothree.slidinguppanel:library:3.0.0'
+    compile 'com.github.lecho:hellocharts-android:v1.5.5'
+    compile 'com.sothree.slidinguppanel:library:3.1.0'
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.2.0'
     compile 'com.google.android.gms:play-services:7.5.0'
